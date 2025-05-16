@@ -1,0 +1,154 @@
+@charset "UTF-8";
+:root{
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;   
+    --bs-gray: #6c757d;   
+    --bs-gray-dark: #343a40;   
+    --bs-primary: #11e531;   
+    --bs-secondary: #6c757d;   
+    --bs-success: #28a745;   
+    --bs-info: #17a2b8;   
+    --bs-warning: #ffc107;   
+    --bs-danger: #dc3545;   
+    --bs-light: #f8f9fa;   
+    --bs-dark:  #212529;  
+    --bs-font-sans-serif: system-ui, apple-system, "Segoe UI" , Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New" , monospace;
+    --bs-gradient: linear-gradient(180deg,#212529,#343a40);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*au survol grossissement et couleur cyan*/
+.nav-item :hover{
+    text-transform: uppercase;
+    color: var(--bs-cyan);
+}
+
+/*le texte est centré sur la page*/
+#slider{
+    text-align: center;
+}
+.circle{
+    text-align: center;
+}
+
+.services p{
+    width: 50%;
+    text-align: center;
+}
+.services_icones{
+    width: 100px;
+    margin-top: 38px;
+}
+.icons{
+    width: 60px;
+    margin: 20px auto;
+    position: relative;
+    color: red;
+}
+.icons_border{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid #b6b6b6;
+    -webkit-animation: spin 5s linear infinite;
+    animation: spin 5s linear infinite;
+}
+
+.icons i{
+    position: absolute;
+    color: red;
+    top: 50%;
+    left: 50%;
+    animation: spin 2s linear infinite;
+    -webkit-animation: spin 2s linear infinite;
+    
+    -webkit-transform: translate(-50%, -50%);
+            /* première ligne pour les anciens navigateurs*/  
+            transform: translate(-50%, -50%);
+            /* deuxième ligne pour les navigateurs plus récents*/  
+    /* webkit sert pour les anciens navigateurs*/
+    /* ou ceux d'ont les icones */
+    /* ne sont pas forcement prises en compte */
+}
+
+/*pour les anciens navigateurs*/
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+/*pour les navigateurs plus récents*/
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/*
+.album{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.album figure{
+    width: 300px;
+    position: relative;
+
+}
+.album figure img{
+    width: 300px;
+}
+.album figcaption{
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    overflow: hidden;
+    height: 0;
+    transition: .5s ease;
+}
+.album figcaption h4{
+    position: absolute;
+    top: -1px;
+    left: 10px;
+}
+.album figcaption p{
+    margin-left: 10px;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+.album figure:hover figcaption{
+    height: 30%;
+    max-width: 100%;
+    margin-bottom: 0;
+    overflow: visible;
+}
+    */
+/*
+.fa-eye{
+    position: absolute;
+    top: -25px;
+    right: 26px;
+    font-size: 20px;
+    padding: 14px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: #70abcf;
+    z-index: 5;
+}
+    */
